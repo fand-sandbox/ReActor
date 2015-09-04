@@ -29,6 +29,10 @@ export default {
     html : BASE('src/**/*.html'),
   },
 
+  serve : {
+    app : BASE('script/serve.sh'),
+  },
+
   browserSync : {
     proxy: 'localhost:3000',
   },
