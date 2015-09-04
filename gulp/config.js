@@ -30,10 +30,7 @@ export default {
   },
 
   browserSync : {
-    server : {
-      baseDir : BASE('public'),
-    },
-    files : [BASE('public/**/*')],
+    proxy: 'localhost:3000',
   },
 
 };
