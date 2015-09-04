@@ -15,12 +15,11 @@ import io from 'socket.io-client';
 class ReAkka extends Component {
 
   componentDidMount () {
-    const s = io.connect('http://localhost:3000');
-    s.on('connect', () => {
-      setTimeout(() => {
-        s.disconnect();
-      }, 1000);
-    });
+    this.socket = io.connect('http://localhost:3000');
+    this.socket.on('connect', () => console.log('>>>>> conn'));
+    this.socket.on('disconnect', () => console.log('>>>>> disconn（◞‸◟）'));
+    this.socket.on('increment', () => console.log('## inc'));
+    this.socket.on('decrement', () => console.log('## dec'));
   }
 
   render () {

@@ -22,7 +22,7 @@ app.io.route('increment', function* () {
   console.log('############ received!');
   console.log(this.args);
   console.log(arguments);
-  this.broadcast.emit('increment', {});
+  this.broadcast.emit('incremented', {});
   yield null;
 });
 

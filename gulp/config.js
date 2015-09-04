@@ -30,7 +30,10 @@ export default {
   },
 
   serve : {
-    app : BASE('script/serve.sh'),
+    app : {
+      name   : 'ReAkka',
+      script : BASE('script/serve.sh'),
+    }
   },
 
   browserSync : {
