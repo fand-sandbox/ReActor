@@ -10,7 +10,7 @@ import CountActions from '../actions/Count';
     count : state.count
   };
 })
-class Reakka extends Component {
+class ReAkka extends Component {
 
   render () {
     const { count, dispatch } = this.props;
@@ -27,4 +27,4 @@ class Reakka extends Component {
 }
 
 
-export default Reakka;
+export default ReAkka;
