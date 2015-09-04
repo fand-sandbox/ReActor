@@ -17,9 +17,12 @@ app.io.use(function* (next) {
 
 // router for socket event
 app.io.route('increment', function* () {
-  console.log('##ぽっぽえ');
   this.broadcast.emit('increment', {});
   this.emit('increment', {});
+});
+app.io.route('decrement', function* () {
+  this.broadcast.emit('decrement', {});
+  this.emit('decrement', {});
 });
 
 app.listen(3000);
