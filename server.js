@@ -17,13 +17,9 @@ app.io.use(function* (next) {
 
 // router for socket event
 app.io.route('increment', function* () {
-  // we tell the client to execute 'new message'
-  var message = this.args[0];
-  console.log('############ received!');
-  console.log(this.args);
-  console.log(arguments);
-  this.broadcast.emit('incremented', {});
-  yield null;
+  console.log('##ぽっぽえ');
+  this.broadcast.emit('increment', {});
+  this.emit('increment', {});
 });
 
 app.listen(3000);

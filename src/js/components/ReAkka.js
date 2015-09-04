@@ -22,14 +22,22 @@ class ReAkka extends Component {
     this.socket.on('decrement', () => console.log('## dec'));
   }
 
+  _increment () {
+    this.socket.emit('increment');
+  }
+
+  _decrement () {
+    this.socket.emit('decrement');
+  }
+
   render () {
     const { count, dispatch } = this.props;
     const actions   = bindActionCreators(CountActions, dispatch);
     return (
       <ul className="Reakka">
         <li>count : {count}</li>
-        <li><button onClick={actions.increment}>++</button></li>
-        <li><button onClick={actions.decrement}>--</button></li>
+        <li><button onClick={::this._increment}>++</button></li>
+        <li><button onClick={::this._decrement}>--</button></li>
       </ul>
     );
   }
