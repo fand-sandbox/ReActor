@@ -29,11 +29,15 @@ export default {
     html : BASE('src/**/*.html'),
   },
 
+  serve : {
+    app : {
+      name   : 'ReAkka',
+      script : BASE('script/serve.sh'),
+    }
+  },
+
   browserSync : {
-    server : {
-      baseDir : BASE('public'),
-    },
-    files : [BASE('public/**/*')],
+    proxy: 'localhost:3000',
   },
 
 };

@@ -1,7 +1,7 @@
 'use strict';
 
 import pm2 from 'pm2';
-import { pm2 as config } from '../config';
+import { serve as config } from '../config';
 
 const p = function (method, arg) {
   console.log(`## serve: gonna ${method}`);

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import Reakka from './Reakka';
+import ReAkka from './ReAkka';
 
 const reducer = function (state={count: 0}, action) {
   switch (action.type) {
@@ -23,7 +23,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        {() => <Reakka />}
+        {() => <ReAkka />}
       </Provider>
     );
   }
